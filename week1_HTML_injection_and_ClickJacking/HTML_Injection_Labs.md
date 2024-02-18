@@ -19,36 +19,44 @@ The lab interface features a search bar that accepts user input.
 
 #### Solution:
 1. Entered a name into the search bar to verify input reflection.
-2. Tested for HTML injection by inputting the payload "< h1> MKW < /h1>".
+2. Tested for HTML injection by inputting the payload "< h1>Cybersecurity with MKW < /h1>".
 3. Confirmed vulnerability based on the displayed output.
 
 ### Lab 2: Let me Store them!
 #### Observation:
 The lab presents a login page and a registration form.
 
+![Alt text](screenshots/2.png)
+
 #### Solution:
 1. Created a user with crafted payloads for the first and last names.
-2. Logged in to observe the effects of stored HTML injection.
+2. Added HTML code in the form and it stored it as text
+2. Log in to observe the effects of stored HTML injection.
 
 ### Lab 3: File Names are also vulnerable!
 #### Observation:
 A file upload feature is provided.
 
+![Alt text](screenshots/3.png)
+
 #### Solution:
-1. Uploaded a file and intercepted the request using Burp Suite.
-2. Injected an HTML tag ("< h1>") before the filename to confirm vulnerability.
+1. Injected an HTML tag to confirm vulnerability.
 
 ### Lab 4: File Content and HTML Injection a perfect pair!
 #### Observation:
 Similar to Lab 3, with file upload functionality.
 
+![Alt text](screenshots/4.png)
+
 #### Solution:
-1. Uploaded an HTML file to execute arbitrary code.
+1. Uploaded an PDF file.
 2. Demonstrated the risk of allowing file content interpretation.
 
 ### Lab 5: Injecting HTML using URL
 #### Observation:
 No injectable parameter is visible, but the URL is displayed.
+
+![Alt text](screenshots/5.png)
 
 #### Solution:
 1. Modified the URL with an HTML injection payload.
@@ -58,10 +66,10 @@ No injectable parameter is visible, but the URL is displayed.
 #### Observation:
 A familiar lab interface resembling Lab 1.
 
+![Alt text](screenshots/6.png)
+
 #### Solution:
-1. Attempted a known payload ("< h1> MKW < /h1>") and noticed backend filtering.
-2. Encoded angular brackets using URL encoding to bypass filtering.
-3. Successfully executed HTML injection with the encoded payload.
+1. Successfully executed HTML injection with the encoded payload.
 
 ## Conclusion
 HTML Injection poses a significant threat to web application security. Through practical labs, we explored various scenarios and mitigation techniques. It's crucial for developers to implement proper input validation and output encoding to effectively mitigate HTML Injection vulnerabilities.
