@@ -15,6 +15,8 @@ HTML Injection vulnerabilities are classified as P4 bugs with a CVSS score rangi
 #### Observation:
 The lab interface features a search bar that accepts user input.
 
+![Alt text](screenshots/1.png)
+
 #### Solution:
 1. Entered a name into the search bar to verify input reflection.
 2. Tested for HTML injection by inputting the payload "< h1> MKW < /h1>".
